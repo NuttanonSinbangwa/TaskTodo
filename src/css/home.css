@@ -1,0 +1,407 @@
+/* --------------------------------------------------
+GLOBAL
+-------------------------------------------------- */
+body {
+    margin: 0;
+    background: #f6f4f3;
+    color: #31241e;
+
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+hr {
+    width: 80%;
+    margin-top: 5px;
+    margin-bottom: 35px;
+    border: none;
+    border-top: 1.6px solid #c8c2b9;
+}
+
+
+/* --------------------------------------------------
+HEADER
+-------------------------------------------------- */
+header {
+    padding: 10px 100px;
+    
+    display: flex;
+    justify-content: space-between;
+    background: #d1c8c1;
+    border-bottom: 0px solid #d1c8c1;   /* เส้นพอดีขึ้น */
+    align-items: center;     /* 👈 สำคัญมาก ทำให้ปุ่มอยู่กลาง */
+
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+header a {
+    text-decoration: none;
+    font-weight: 900px;
+    color: #31241e;
+    padding: 8px 18px;
+    border-radius: 0px;
+    font-size: 20px;
+    transition: 0.25s;
+    
+}
+
+header a.active,
+header a:hover {
+    background: #ffffff;
+    padding: 8px 18px;
+    border-radius: 0px;
+}
+
+@media (max-width: 768px){
+    header {
+        padding: 20px 20px;
+        flex-direction: column;
+        gap: 10px;
+        text-align:center;
+    }
+
+    header a {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+
+    h1{
+        font-size: 32px;
+    }
+}
+
+/* --------------------------------------------------
+TITLE
+-------------------------------------------------- */
+h1 {
+    text-align: center;
+    font-size: 42px;
+    margin-top: 30px;
+   
+    letter-spacing: 0.5px;
+
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700px;
+  font-style: normal;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 16px;
+    margin-top: 4px;
+
+  font-family: "Sarabun", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* --------------------------------------------------
+BUTTONS
+-------------------------------------------------- */
+.btn-area {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 24px;
+    border: 2px solid #06c755;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 15px;
+    margin: 0 20px;   /* ← ซ้ายขวาปุ่มละ 10px */
+}
+
+.greennobg {
+    color:#06c755;
+
+}
+
+
+
+.green {
+    background: #ffffff;
+    color: #06c755;
+
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.white {
+    background: #06c755;
+    color: #fff;
+
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* --------------------------------------------------
+DIVIDER — เส้นคั่นพอดี
+-------------------------------------------------- */
+.hr-line {
+    width: 90%;
+    height: 1.6px;
+    background: #c8c2b9;
+    margin: 35px auto;
+}
+
+/* --------------------------------------------------
+CARD
+-------------------------------------------------- */
+.card-container {
+    width: 95%;
+    max-width: 1400px;
+    margin: 40px auto;
+    display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 28px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 0px;
+    padding: 10px;
+    border: 0px solid #e0dcd6;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: 0.2s;
+
+  font-family: "Sarabun", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.07);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0px;
+}
+
+.card select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 12px;
+    border: 1px solid #aaa;
+    border-radius: 0px;
+}
+
+.card h3 {
+  font-family: "Sarabun", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+
+.open-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 14px;
+    background: #d1c8c1;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* --------------------------------------------------
+STATUS
+-------------------------------------------------- */
+.status {
+    text-align: center;
+    margin: 22px;
+    font-size: 14px;
+
+  font-family: "Sarabun", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.red {
+    color: red;
+}
+
+.greenText {
+    color: #06c755;
+    font-weight: 700;
+}
+
+/* --------------------------------------------------
+POPUP
+-------------------------------------------------- */
+/* POPUP OVERLAY */
+.popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+
+    justify-content: center;
+    align-items: center;
+    padding: 20px;        /* กันไม่ให้ติดขอบบน-ล่างของ iPad */
+    z-index: 9999;
+}
+
+/* POPUP BOX */
+/* POPUP OVERLAY */
+.popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 9999;
+}
+
+/* POPUP BOX */
+.popup-box {
+    width: 90%;
+    max-width: 420px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background:#fff;
+    padding: 24px 28px;
+    border-radius: 14px;
+    border: 1px solid #d7d4cf;
+    box-sizing: border-box;
+}
+
+
+/* หัวข้อฟอร์ม */
+.popup-box h2 {
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 18px;
+
+    
+  font-family: "Sarabun", sans-serif;
+  font-style: normal;
+
+
+}
+
+
+.close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* INPUT */
+/* ช่องกรอก */
+.input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d1c8c1;
+    margin: 12px 0 18px;
+    font-size: 16px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+
+
+/* -------------------------------------------------- */
+
+
+
+
+textarea.input {
+    height: 120px;
+    resize: none;
+}
+
+/* SAVE BUTTON */
+.btn-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    width: 100%;
+}
+
+
+.btn-save,
+.btn-cancel {
+    flex: 1;
+    white-space: nowrap;       /* กันปุ่มแตก */
+    padding: 12px;
+    font-size: 16px;
+
+    
+  font-family: "Sarabun", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+.btn-save {
+    flex: 1;
+    padding: 12px;
+    background: #06c755;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.btn-cancel {
+    flex: 1;
+    padding: 12px;
+    background: #ec2121c0;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.btn-cancel:hover {
+    background: #ec2121c0;
+    color: #fff;
+}
+
+.btn-save:hover {
+    background: #06c756c4;
+}
+
+.card img{
+    width:100%;
+    height:auto;         /* จากสี่เหลี่ยมแก้เป็น auto */
+    aspect-ratio: 1/1;   /* รักษาสัดส่วน */
+    object-fit: cover;
+}
+
+
+
+
+
+
+

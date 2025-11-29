@@ -1,0 +1,36 @@
+services:
+  php:
+    build: .
+    container_name: php-app
+    volumes:
+      - ./src:/var/www/html
+    ports:
+      - "8083:80"
+    depends_on:
+      - db
+    restart: always
+
+  db:
+    image: mysql:8
+    container_name: mysql-db
+    environment:
+      MYSQL_ROOT_PASSWORD: root123
+      MYSQL_DATABASE: todo_app
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./mysql/data:/var/lib/mysql
+    restart: always
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    environment:
+      PMA_HOST: db
+      PMA_USER: root
+      PMA_PASSWORD: root123
+    ports:
+      - "8082:80"   # ← ตรงนี้ต้องเป็น 8082
+    depends_on:
+      - db
+    restart: always

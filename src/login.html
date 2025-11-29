@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8" />
+<title>Login — Form Collection</title>
+<link rel="stylesheet" href="../css/login.css" />
+</head>
+
+<body>
+
+<div class="login-container">
+
+    <div class="login-box">
+
+        <h2 class="login-title">WELCOME BACK</h2>
+        <p class="login-sub">เข้าสู่ระบบเพื่อจัดการฟอร์มแจ้งเตือนของคุณ</p>
+
+        <form action="login.php" method="POST">
+
+            <label class="label">อีเมล</label>
+            <input type="email" name="email" class="input" required>
+
+            <label class="label">รหัสผ่าน</label>
+            <input type="password" name="password" class="input" required>
+
+            <button type="submit" class="btn-login">เข้าสู่ระบบ</button>
+
+        </form>
+
+        <p class="signup-text">
+            ยังไม่มีบัญชีใช่ไหม?  
+            <a href="signup.html">สร้างบัญชีใหม่</a>
+        </p>
+
+    </div>
+
+</div>
+
+</body>
+</html>

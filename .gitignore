@@ -1,0 +1,17 @@
+# Ignore MySQL data
+mysql/
+mysql/data/
+*.sock
+*.pid
+*.log
+
+# Environment files
+.env
+
+# Vendor / dependencies
+vendor/
+node_modules/
+
+# OS/editor
+.DS_Store
+Thumbs.db
